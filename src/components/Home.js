@@ -1,8 +1,8 @@
 import React from "react";
-import { AnimalCard } from "./animals/AnimalCard.js"
-import { EmployeeCard } from "./employees/Employee.js"
-import { LocationCard } from "./locations/Location.js"
-import { CustomerCard } from "./customers/Customers.js"
+// import { AnimalCard } from "./animals/AnimalCard.js"
+// import { EmployeeCard } from "./employees/Employee.js"
+// import { LocationCard } from "./locations/Location.js"
+// import { CustomerCard } from "./customers/Customers.js"
 import { PropsAndState } from "./PropsAndState.js"
 
 export const Home = () => (
@@ -14,9 +14,9 @@ export const Home = () => (
             <div>Visit Us at the Nashville North Location</div>
             <div>500 Puppy Way</div>
         </address>
-        <PropsAndState yourName={"Brenda"} />
+        <PropsAndState yourName={"Luke Madrazo"} />
         
-        <h2>Animals</h2>
+        {/* <h2>Animals</h2>
         <article className="animals">
             <AnimalCard />
             <AnimalCard />
@@ -43,6 +43,6 @@ export const Home = () => (
             <CustomerCard />
             <CustomerCard />
             <CustomerCard />
-        </article>
+        </article> */}
     </>
 )
