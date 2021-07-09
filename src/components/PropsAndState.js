@@ -1,20 +1,24 @@
-import React, { useState } from "react"
+
+// import React, { useState } from "react"
+
+
 
 export const PropsAndState = ({ yourName }) => {
-  let [countClicks, setCountClicks] = useState(0)
+  // let [countClicks, setCountClicks] = useState(0) //returns an array of 2 things: countClicks variable whose initial value is 0 and setCountClicks
+  //function that updates countClicks state when useState hook is invoked
 
-  const handleClick = () => {
+  // const handleClick = () => {
     //good practice:
-    //make a copy of state, modifiy it, and then setState to the copy
-    const newCountClicks = ++countClicks
-    setCountClicks(newCountClicks)
-  }
+    //make a copy of state, modify it, and then setState to the copy
+  //   const newCountClicks = ++countClicks
+  //   setCountClicks(newCountClicks)
+  // }
 
   return (
     <>
-      <h3>Welcome, {yourName} </h3>
-      <p>{countClicks}</p>
-      <button onClick={(handleClick)}>Click Me</button>
+      <h3>Welcome, {yourName}!</h3>
+      {/* <p>{countClicks}</p>
+      <button onClick={(handleClick)}>Click Me</button> */}
     </>
   )
 }
