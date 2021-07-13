@@ -8,11 +8,11 @@ import { PropsAndState } from './PropsAndState.js'
 export const Home = () => (
     <>
         <h2>Nashville Kennels</h2>
-        <small>Loving care when you're not there.</small>
+        <small>Where dogs can be dogs!</small>
 
         <address>
             <div>Visit Us at the Nashville North Location</div>
-            <div>500 Puppy Way</div>
+            <div>49 Doggy Dog Way</div>
         </address>
 
         <PropsAndState yourName={"Luke Madrazo"} />
