@@ -1,51 +1,36 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AnimalContext } from "./AnimalProvider.js";
-import "./Animal.css";
+import { EmployeeContext } from "./EmployeeProvider.js";
+import "./Employee.css";
 //The useParams method from react-router-dom allows the app to read a parameter from the URL.
 import { useParams, useHistory } from "react-router-dom";
 
 //Component responsible for showing all the details of an animal:
-export const AnimalDetail = () => {
-  const { getAnimalById, releaseAnimal } = useContext(AnimalContext)
+export const EmployeeDetail = () => {
+  const { getEmployeeById } = useContext(EmployeeContext)
 
-	const [animal, setAnimal] = useState({})
+	const [employee, setEmployee] = useState({})
 
-	const {animalId} = useParams(); //useParams from react-router-dom allows the app to read a parameter from the URL with dynamic routing and returns
-  // an object with all dynamic URL parameters as key:value pairs. animalId is the destructured object variable holding the value of number in URL.
+	const {employeeId} = useParams();
+	const history = useHistory();
 
   useEffect(() => {
-    console.log("useEffect", animalId)
-    getAnimalById(animalId)
+    console.log("useEffect", employeeId)
+    getEmployeeById(employeeId)
     .then((response) => {
-      setAnimal(response)
+      setEmployee(response)
     })
     }, [])
 
-
-  const history = useHistory();
-
-  const handleRelease = () => {
-    releaseAnimal(animal.id)
-      .then(() => {
-        history.push("/animal")
-      })
-  };
-
   return (
-    <section className="animal">
-      <h3 className="animal__name">{animal.name}</h3>
-      <div className="animal__breed">Breed: {animal.breed}</div>
+    <section className="employee">
+      <h3 className="employee__name">{employee.name}</h3>
       {/* What's up with the question mark???? See below.*/}
       {/* Immediate properties of an empty object will not break, however nested properties of an empty object will. Use Optional chaining (?.) 
       //operator to prevent nested values from breaking the code. Try with and without the ?. */}
-      <div className="animal__location">Location: {animal.location?.name}</div> 
-      <div className="animal__owner">Customer: {animal.customer?.name}</div>
-      <button onClick={handleRelease}>Release Animal</button>
-      {/* In edit mode, we should have an animalId in the URL. Otherwise, it is a new animal. */}
-      <button onClick={() => {history.push(`/animal/edit/${animal.id}`)}}>
+      <div className="employee__location">Location: {employee.location?.name}</div>
+      <button onClick={() => {history.push(`/employee/edit/${employee.id}`)}}>
         Edit
       </button>
-
     </section>
   )
 };
@@ -58,4 +43,3 @@ export const AnimalDetail = () => {
 // undefined if the given function does not exist. This results in shorter and simpler expressions when accessing chained properties when the 
 // possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee
 // as to which properties are required.
-//If animal has a location and customer, display their names, if these properties do not exist, do not break the code

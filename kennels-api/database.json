@@ -1,0 +1,128 @@
+  
+{
+    "animals": [
+      {
+        "id": 1,
+        "name": "Doodles",
+        "breed": "Poodle",
+        "customerId": 1,
+        "locationId": 2
+      },
+      {
+        "id": 2,
+        "name": "Cindy",
+        "breed": "Maltese",
+        "customerId": 2,
+        "locationId": 1
+      },
+      {
+        "id": 3,
+        "name": "Nova",
+        "breed": "Husky",
+        "customerId": 3,
+        "locationId": 2
+      },
+      {
+        "id": 4,
+        "name": "Konnah",
+        "breed": "Pitbull",
+        "customerId": 4,
+        "locationId": 1
+      },
+      {
+        "name": "Rocky",
+        "breed": "Golden Retriver",
+        "locationId": 3,
+        "customerId": 3,
+        "id": 6
+      },
+      {
+        "id": 7,
+        "name": "Honey Boo Boo",
+        "breed": "Chihuahua",
+        "locationId": 4,
+        "customerId": 5
+      }
+    ],
+    "customers": [
+      {
+        "id": 1,
+        "name": "Joe Shepher",
+        "address": "123 Joe St",
+        "email": "joe@gmail.com"
+      },
+      {
+        "id": 2,
+        "name": "Christina Answorth",
+        "address": "123 Chirstina Drive",
+        "email": "christina@gmail.com"
+      },
+      {
+        "id": 3,
+        "name": "Bryan Ford",
+        "address": "123 Bryan Blvd",
+        "email": "bryan@gmail.com"
+      },
+      {
+        "id": 4,
+        "name": "John Wark",
+        "address": "123 John Ave",
+        "email": "john@gmail.com"
+      },
+      {
+        "name": "Ashley Canino",
+        "address": "123 Ashley Party",
+        "id": 5,
+        "email": "ashley@gmail.com"
+      }
+    ],
+    "employees": [
+      {
+        "id": 1,
+        "name": "Luke Madrazo",
+        "locationId": 2
+      },
+      {
+        "id": 2,
+        "name": "Luz Madrazo",
+        "locationId": 1
+      },
+      {
+        "id": 3,
+        "name": "Gabriel Miranda",
+        "locationId": 2
+      },
+      {
+        "id": 4,
+        "name": "Joe Biden",
+        "locationId": 4
+      },
+      {
+        "id": 5,
+        "name": "Manny Pacquio",
+        "locationId": 3
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "name": "Nashville North",
+        "address": "49 Nss St"
+      },
+      {
+        "id": 2,
+        "name": "Nashville South",
+        "address": "111 Doodle Dr"
+      },
+      {
+        "id": 3,
+        "name": "Nashville West",
+        "address": "4500 Animal Blvd"
+      },
+      {
+        "name": "Nashville East",
+        "address": "567 Palm Lane",
+        "id": 4
+      }
+    ]
+  }
