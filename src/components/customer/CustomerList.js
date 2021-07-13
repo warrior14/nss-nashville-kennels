@@ -1,9 +1,10 @@
 //The useContext hook allows you to use data structures and functions that a parent provider component exposes. First need to import the context 
 //object (CustomerContext) created in the CustomerProvider component so that the Context hook can access the objects it exposes.
 
-import React, { useContext, useEffect } from "react"
-import { CustomerContext } from "./CustomerProvider.js"
-import { CustomerCard } from "./Customer.js"
+import React, { useContext, useEffect } from "react";
+import { CustomerContext } from "./CustomerProvider.js";
+import { CustomerCard } from "./Customer.js";
+import { useHistory } from 'react-router-dom';
 
 export const CustomerList = () => {
   // This state(customers) changes when `getCustomers()` is invoked below
@@ -28,17 +29,26 @@ export const CustomerList = () => {
   //   console.log(customers)
   // }, [customers])
 
+  const history = useHistory()
+
   //Use the .map() array method to iterate the array of customers and generate HTML/JSX for each one by invoking the CustomerCard component function.
   //The key and customer arguments become properties on an object that gets passed as an argument.
   return (
-    <div className="customers">
-      {console.log("CustomerList: Render", customers)}
-      {/* <h2>Customers</h2> */}
-      {
-        customers.map(customer => {
-          return <CustomerCard key={customer.id} customer={customer} />
-        })
-      }
-    </div>
+    <>
+      <h2>Customers</h2>
+        <button onClick={() => {history.push("/customer/create")}}>
+            New Customer
+        </button>
+
+      <div className="customers">
+        {console.log("CustomerList: Render", customers)}
+        {/* <h2>Customers</h2> */}
+        {
+          customers.map(customer => {
+            return <CustomerCard key={customer.id} customer={customer} />
+          })
+        }
+      </div>
+    </>
   )
 }

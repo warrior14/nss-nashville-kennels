@@ -3,20 +3,39 @@
 // and behavior of the application. This Kennel component contains two different kinds of child components which are NavBar and ApplicationViews: 
 //NavBar: This is a Presentation Component. Directly expresses HTML.
 //ApplicationViews: A Controller/Router Component whose only responsibility is to control the behavior of the system and maps URLs to components.
-
-import React from "react"
-import "./Kennel.css"
-import { NavBar } from "./nav/NavBar.js"
-import { ApplicationViews } from "./ApplicationViews.js"
-
-
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { ApplicationViews } from "./ApplicationViews";
+import { NavBar } from "./nav/NavBar";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
+import "./Kennel.css";
 
 export const Kennel = () => (
-    <>
-        <NavBar />
-        <ApplicationViews />
-    </>
-)
+  <>
+    <Route
+      render={() => {
+        if (localStorage.getItem("kennel_customer")) {
+          return (
+            <>
+              <NavBar />
+              <ApplicationViews />
+            </>
+          );
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
+
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+  </>
+);
 
 
 
