@@ -40,9 +40,9 @@ export const AnimalDetail = () => {
       //operator to prevent nested values from breaking the code. Try with and without the ?. */}
       <div className="animal__location">Location: {animal.location?.name}</div> 
       <div className="animal__owner">Customer: {animal.customer?.name}</div>
-      <button onClick={handleRelease}>Release Animal</button>
+      <button className="animal_btn" onClick={handleRelease}>Release Animal</button>
       {/* In edit mode, we should have an animalId in the URL. Otherwise, it is a new animal. */}
-      <button onClick={() => {history.push(`/animal/edit/${animal.id}`)}}>
+      <button className="animal_btn" onClick={() => {history.push(`/animal/edit/${animal.id}`)}}>
         Edit
       </button>
 

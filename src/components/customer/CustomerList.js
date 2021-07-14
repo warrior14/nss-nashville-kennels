@@ -35,9 +35,9 @@ export const CustomerList = () => {
   //The key and customer arguments become properties on an object that gets passed as an argument.
   return (
     <>
-      <h2>Customers</h2>
-        <button onClick={() => {history.push("/customer/create")}}>
-            New Customer
+      <h2 className="customerHeader">Customers</h2>
+        <button className="addCustBut" onClick={() => {history.push("/customer/create")}}>
+            Add New Customer
         </button>
 
       <div className="customers">

@@ -1,4 +1,3 @@
-  
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from 'react-router-dom';
 import { LocationContext } from "../location/LocationProvider.js";
@@ -80,7 +79,7 @@ export const EmployeeForm = () => {
         <h2 className="employeeForm__title">New Employee</h2>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="employeeName">Employee name: </label>
+            <label className="employeeName" htmlFor="employeeName">Employee name: </label>
             <input type="text" id="employeeName" name="name" required autoFocus className="form-control"
             placeholder="Employee name"
             onChange={handleControlledInputChange}
@@ -89,7 +88,7 @@ export const EmployeeForm = () => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="location">Assign to location: </label>
+            <label className="employeeLocation" htmlFor="location">Assign to location: </label>
             <select value={employee.locationId} name="locationId" id="employeeLocation" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a location</option>
               {locations.map(location => (

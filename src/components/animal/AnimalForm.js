@@ -84,8 +84,8 @@ export const AnimalForm = () => {
       <form className="animalForm">
         <h2 className="animalForm__title">New Animal</h2>
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="animalName">Animal name: </label>
+          <div className="form-group-animal">
+            <label className="animal_label" htmlFor="animalName">Animal name: </label>
             <input type="text" id="animalName" name="name" required autoFocus className="form-control"
             placeholder="Animal name"
             onChange={handleControlledInputChange}
@@ -93,8 +93,8 @@ export const AnimalForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="animalBreed">Animal breed:</label>
+          <div className="form-group-animal">
+            <label className="animal_label" htmlFor="animalBreed">Animal breed:</label>
             <input type="text" id="animalBreed" name="breed" required autoFocus className="form-control" 
             placeholder="Animal breed" 
             onChange={handleControlledInputChange}
@@ -102,8 +102,8 @@ export const AnimalForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="location">Assign to location: </label>
+          <div className="form-group-animal">
+            <label className="animalLabel" htmlFor="location">Assign to location: </label>
             <select value={animal.locationId} name="locationId" id="animalLocation" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a location</option>
               {locations.map(location => (
@@ -115,8 +115,8 @@ export const AnimalForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="customer">Customer: </label>
+          <div className="form-group-animal">
+            <label className="animal_label" htmlFor="customer">Customer: </label>
             <select value={animal.customerId} name="customerId" id="customerAnimal" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a customer</option>
               {customers.map(customer => (

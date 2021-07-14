@@ -1,0 +1,36 @@
+
+.home_div {
+    margin-left: 35em;
+    margin-top: 15em;
+    padding: 0.5em;
+    background-color: rgb(233, 222, 222);
+    width: 30%;
+}
+
+.header {
+    font-size: 45px;
+    margin: 10px;
+    margin-left: 1em;
+}
+
+.slogan {
+    font-size: 30px;
+    margin-left: 1em;
+}
+
+.directions {
+    font-size: 20px;
+    text-align: center;
+    margin-left: -29em;
+    margin-top: 5px;
+}
+
+.greeting {
+    margin-left: 6em;
+
+}
+
+
+.puppy {
+    margin-left: 28em;
+}

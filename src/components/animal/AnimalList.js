@@ -59,9 +59,9 @@ export const AnimalList = () => {
 
   return (
     <>
-      <h2>Animals</h2>
+      <h2 className="animalHeader">Animals</h2>
 
-		  <button onClick={() => {history.push("/animal/create")}}>
+		  <button className="addAnimalBut" onClick={() => {history.push("/animal/create")}}>
           Make Reservation
       </button>
 

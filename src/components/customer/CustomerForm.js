@@ -57,13 +57,13 @@ export const CustomerForm = () => {
       <h2 className="customerForm__title">New Customer</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">Customer name:</label>
+          <label className="name" htmlFor="name">Customer name:</label>
           <input type="text" id="name" required autoFocus className="form-control" placeholder="Customer name" value={customer.name} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="address">Customer address:</label>
+          <label className="address" htmlFor="address">Customer address:</label>
           <input type="text" id="address" required autoFocus className="form-control" placeholder="Customer address" value={customer.address} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
