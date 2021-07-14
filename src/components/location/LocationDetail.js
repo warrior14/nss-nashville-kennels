@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState } from "react";
 import { LocationContext } from "./LocationProvider.js";
 import "./Location.css";
@@ -51,7 +50,7 @@ export const LocationDetail = () => {
             })
         }
 
-      <button onClick={() => {history.push(`/location/edit/${location.id}`)}}>
+      <button className="edit__btn" onClick={() => {history.push(`/location/edit/${location.id}`)}}>
         Edit
       </button>
     </section>

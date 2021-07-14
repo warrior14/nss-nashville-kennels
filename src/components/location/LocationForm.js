@@ -90,7 +90,7 @@ export const LocationForm = () => {
         <h2 className="locationForm__title">New Location</h2>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="locationName">Location name: </label>
+            <label className="locationName" htmlFor="locationName">Location name: </label>
             <input type="text" id="locationName" name="name" required autoFocus className="form-control"
             placeholder="Location name"
             onChange={handleControlledInputChange}
@@ -99,7 +99,7 @@ export const LocationForm = () => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <label htmlFor="locationAddress">Location address:</label>
+            <label className="locationAddress" htmlFor="locationAddress">Location address:</label>
             <input type="text" id="locationAddress" name="address" required autoFocus className="form-control" 
             placeholder="Location address" 
             onChange={handleControlledInputChange}
